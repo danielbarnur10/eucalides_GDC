@@ -8,14 +8,19 @@ function euclid(a, b) {
     }
 
 };
-document.querySelector('button').addEventListener('click', () => {
-let r = 0;
-    const a = +document.querySelector('.param1').value;
-    const b = +document.querySelector('.param2').value;
-    let pElem = document.createElement('p')
-    pElem.textContent = 'Result:' + (r = euclid(a, b));
-    console.log('GCD('+ a+','+ b+')' + ' is done =' , r );
+function submitDetails(event) {
+    event.preventDefault();
+    const data = event.target;
+    const a = data.param1.value;
+    const b = data.param2.value;
+    let pElem = document.createElement('p');
+    
+    const result = euclid(a, b);
+    pElem.textContent = 'Result:' + (result);
+    console.log('GCD('+ a + ',' + b + ')' + ' is done =' , result );
     document.body.appendChild(pElem)
 
-})
+}
+
+   
 

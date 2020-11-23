@@ -10,20 +10,12 @@
 
 <body>
     <h1>GCD Eucalides:</h1>
-    <section>
-        <div>
-            <input class="param1" placeholder="enter parameter 1"></input>
-        </div>
-        <div>
-            <input class="param2" placeholder="enter parameter 2"></input>
-        </div>
-    </section>
-    <!-- actions -->
-    <section>
-        <div>
-            <button class="button" type="submit">Result</button>
-        </div>
-    </section>
+    <form onsubmit="submitDetails(event)">
+        <div><input type="number" name="param1" placeholder="Param 1"></div>
+        <div><input type="number" name="param2" placeholder="Param 2"></div>
+        <br>
+        <button class="button">Submit</button></div>
+      </form>
 
 </body>
 <script src="euclides.js"></script>
