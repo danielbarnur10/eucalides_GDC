@@ -19,17 +19,16 @@ function Extended_Euclid(a, b) {
     console.log(obj.d, obj.x, obj.y);
     return obj;
 };
-document.querySelector('button').addEventListener('click', () => {
-    let r = 0;
-    const a = +document.querySelector('.param1').value;
-    const b = +document.querySelector('.param2').value;
+function submitDetails(event) {
+    event.preventDefault();
+    const data = event.target;
+    const a = data.param1.value;
+    const b = data.param2.value;
     let pElem = document.createElement('p');
-    r = Extended_Euclid(a, b);
-    pElem.textContent = `Result: d = ${r.d} x = ${r.x} y = ${r.y}`;
-    console.log('GCD(' + a + ',' + b + ')' + ' is done =', r);
+    
+    const result = Extended_Euclid(a, b);
+    pElem.textContent = `Result: d = ${result.d} x = ${result.x} y = ${result.y}`;
+    console.log('GCD(' + a + ',' + b + ')' + ' is done =', result);
     document.body.appendChild(pElem)
 
-})
-
-let a = 35, b = 15;
-Extended_Euclid(a, b)
+}

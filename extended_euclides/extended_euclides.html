@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expanded Euclides</title>
-    <link rel="stylesheet" href="extended_euclides.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expanded Euclides</title>
+  <link rel="stylesheet" href="extended_euclides.css">
 </head>
+
 <body>
   <section>
-      <h1>Expanded Euclides GCD:</h1>
-    <div><input type="text" class= "param1" placeholder="Param 1"></div>
-    <div><input type="text" class= "param2" placeholder="Param 2"></div>
-    <div></div><button type ="button">Submit</button></div>
-    </section>  
+    <h1>Expanded Euclides GCD:</h1>
+    <form onsubmit="submitDetails(event)">
+      <div><input type="number" name="param1" placeholder="Param 1"></div>
+      <div><input type="number" name="param2" placeholder="Param 2"></div>
+      <br>
+      <button class="button" >Submit</button></div>
+  </section>
+  </form>
 </body>
 
 <script src="extended_euclides.js"></script>
+
 </html>
